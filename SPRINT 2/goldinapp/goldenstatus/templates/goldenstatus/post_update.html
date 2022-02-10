@@ -1,0 +1,37 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table align="center">
+    <h1 align="center">Gold image update</h1>
+
+        <tr>
+            <td>Image</td>
+            <td><input type="file" name="img" required class="form-control"></td>
+        </tr>
+    <tr>
+        <td>pergram</td>
+        <td><input type="text" name="gram" class="form-control"></td>
+
+    </tr>
+    <tr>
+        <td>pavam</td>
+        <td><input type="text" name="pavam" class="form-control"></td>
+    </tr>
+
+       <tr>
+           <td></td>
+           <td><input type="submit" value="submit" class="btn btn-primary"></td>
+       </tr>
+
+</table>
+<center>
+    <a href="">ADD</a>
+</center>
+
+</form>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    <center><a href="/reward/post_re/" class="btn btn-danger">ADD</a> </center>
+    <table align="center" class="table table-bordered">
+        <tr>
+            <td>RId</td>
+            <td>Duration</td>
+            <td>Percentage</td>
+            <td>Type</td>
+            <td>Plan</td>
+
+        </tr>
+        {% for i in abc %}
+        <tr>
+            <td>{{ i.rwid }}</td>
+            <td>{{ i.rduration }}</td>
+            <td>{{ i.rper }}</td>
+            <td>{{ i.type }}</td>
+            <td>{{ i.plan }}</td>
+{#            <td><a href="{% url 'updt' idd=i.fixed_id %}" class="btn btn-primary">update</a></td>#}
+            <td><a href="{% url 'redelete' idd=i.rwid %}" class="btn btn-primary">delete</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</form>
+    </div>
+{% endblock %}
+{#</body>#}
+{#</html>#}

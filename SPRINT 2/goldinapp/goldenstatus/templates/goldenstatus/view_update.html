@@ -1,0 +1,35 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    <table align="center" class="table table-bordered">
+        <h1 align="center">view image</h1>
+        <tr>
+
+            <th>image</th>
+{#            <th>pergram</th>#}
+{#            <th>perpavam</th>#}
+            <th></th>
+            <th></th>
+        </tr>
+
+            {% for i in objval %}
+        <tr>
+            <td><img src="/static/{{ i.image }}" style="width: 4cm;height: 3cm"></td>
+            <td>{{ i.pergram }}</td>
+            <td>{{ i.pavan }}</td>
+            <td><a href="{%  url 'update' idd=i.g_id %}" class="btn btn-primary">update</a></td>
+            <td><a href="{% url 'delete' idd=i.g_id %}" class="btn btn-primary">Delete</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+<center><a href="/goldenstus/add/" class="btn btn-primary">add</a></center>
+</form>
+    </div>
+{% endblock %}
+</body>
+</html>

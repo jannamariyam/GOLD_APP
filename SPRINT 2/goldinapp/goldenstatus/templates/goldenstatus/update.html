@@ -1,0 +1,41 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center">
+        {% for i in objval %}
+        <tr>
+
+            <td><img src="/static/{{ i.image }}" height="150" width="150">
+                </td>
+        </tr>
+        <tr>
+        <td>
+            <input type="file" name="img" value="{{ i.image }}">
+        </td>
+        </tr>
+{#        <tr>#}
+{#        <td>per gram</td>#}
+{#        <td><input type="text" name="gram" value="{{ i.pergram }}" required class="form-control"></td>#}
+{#    </tr>#}
+{#        <tr>#}
+{#            <td>pavan</td>#}
+{#            <td><input type="text" name="pavan" value="{{ i.pavan }}" required class="form-control"></td>#}
+{#        </tr>#}
+
+
+        <tr>
+          <td><input type="submit" value="submit" class="btn btn-primary"></td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+</form>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="/static/dist/css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="/static/dist/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html"><b><i>GOLD IN APP</i></b></a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">
+{#                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />#}
+                    <div class="input-group-append">
+{#                        <button class="btn btn-danger" type="button"><i class="fas fa-search"></i></button>#}
+                    </div>
+                </div>
+            </form>
+            <div>
+                <a style="color: #FFFFFF" href=""><i>Logout</i></a>
+            </div>
+            <!-- Navbar-->
+            <!--<ul class="navbar-nav ml-auto ml-md-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Activity Log</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/login/login/">Logout</a>
+                    </div>
+                </li>
+            </ul>-->
+        </nav>
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+{#                <nav class="sb-sidenav accordion sb-sidenav " style="color: #0d6efd" id="sidenavAccordion">#}
+
+                    <!--<img src="" alt class="img-fluid  rounded-circle">-->
+
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading" style="color:#17a2b8"><h5>HOME</h5></div>
+{#                            <a class="nav-link" href="/temp/homead/">#}
+{#                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>#}
+{#                                 Home#}
+{#                            </a>#}
+                            <a class="nav-link" href="/goldenstus/update/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                               UPDATE IMAGE
+                            </a>
+                            <a class="nav-link" href="/price_fixed/post_price/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-edit"></i></div>
+                              GOLD RATE
+                            </a>
+                            <a class="nav-link" href="/package/packview/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                               PACKAGES AND TYPE
+                            </a>
+
+                             <a class="nav-link" href="/reward/view_re">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                             UPDATE REWARDS
+                            </a>
+                             <a class="nav-link" href="/account/view/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                          UPDATE BANK ACCOUNT
+                            </a>
+                             <a class="nav-link" href="/account/penalty/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                                UPDATE PENALTY
+                            </a>
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                                SCHEME MANAGEMENT
+                            </a>
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                                AMOUNT MANAGEMENT
+                            </a>
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                               VIEW REPORT
+                            </a>
+                            <a class="nav-link" href="">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key"></i></div>
+                               CLOSE ACCOUNT
+                            </a>
+{#                            <div class="sb-sidenav-menu-heading" style="color:#17a2b8"><h5>Interface</h5></div>#}
+{#                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">#}
+{#                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>#}
+{#                                File#}
+{#                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>#}
+{#                            </a>#}
+{#                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">#}
+{#                                <nav class="sb-sidenav-menu-nested nav">#}
+{#                                    <a class="nav-link" href="/file/emp_upload_file/">Upload</a>#}
+{#                                    <a class="nav-link" href="/file/emp_download_file/">Download</a>#}
+{#                                </nav>#}
+{#                            </div>#}
+{#                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapseLayouts">#}
+{#                                <div class="sb-nav-link-icon"><i class="fas fa-question-circle"></i></div>#}
+{#                               Query#}
+{#                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>#}
+{#                            </a>#}
+{#                            <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-parent="#sidenavAccordion">#}
+{#                                <nav class="sb-sidenav-menu-nested nav">#}
+{#                                    <a class="nav-link" href="/complaint/emp_view_reply/">View</a>#}
+{#                                    <a class="nav-link" href="/complaint/emp_post_query/">Post</a>#}
+{#                                </nav>#}
+{#                            </div>#}
+{#                            <div class="sb-sidenav-menu-heading " style="color:#17a2b8"><h5>Addons</h5></div>#}
+{#                            <a class="nav-link" href="/feedback/emp_send_feedback/">#}
+{#                                <div class="sb-nav-link-icon"><i class="fas fa-comment-alt"></i></div>#}
+{#                               Feedback#}
+{#                            </a>#}
+{#                        </div>#}
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+
+                    <div class="container-fluid">
+                        {% for ob in val %}
+                            <h1 class="mt-4" style="color:#17a2b8" "><i>Hi...{{ ob.emp_name }}</i></h1>
+                        {% endfor %}
+
+                    </div>
+                <div class="row no-gutters">
+                    <div class="content col-xl-5 d-flex align-items-stretch">
+{#                        <div class="icon-boxes d-flex flex-column align-content-center justify-content-center">#}
+{#                              <div class="row" align="center">#}
+{#                                  <img src="/static/Gold1.jpg" width="1500" height="700">#}
+{#                              </div>#}
+{#                        </div>#}
+{#                        <div class="content">#}
+{#                            <h3 class="col-lg-12 order-2 order-lg-2 mt-5  text-center"   style="color: black"><i>"Your work is going to fill a large part of your life,#}
+{#                                and the only way to be truly satisfied is to do what you believe is great work.#}
+{#                                And the only way to do great work is to love what you do.... "</i></h3#}
+{#                            ><h3 class="col-lg-12 order-2 order-lg-2 mt-5  text-center">-Steve Jobs</h3>#}
+{#                        </div>#}
+                   </div>
+                    <div class="col-xl-7 d-flex align-items-stretch">
+{#                        <div class="icon-boxes d-flex flex-column align-content-center justify-content-center">#}
+{#                              <div class="row">#}
+{#                                  <img src="/static/sardar-sarovar-2.jpg">#}
+{#                              </div>#}
+{#                        </div>#}
+                    </div>
+
+{#                    <div class="tab-pane" id="tab-3">#}
+{##}
+{#                         <div class="row">#}
+{##}
+{#                                <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">#}
+{#                                    <img src="/temp/sb_admin/dist/assets/img/desk-computer-technology-screen.jpg">#}
+{#                                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">#}
+{#                                           <h3  style="color: black"><i>"Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do... " -Steve Jobs</i></h3>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+
+{##}
+{#                         </div>#}
+{#                    </div>#}
+                </div>
+                <div align="center">
+                        {% block base %}
+
+
+
+                        {% endblock %}
+                    </div>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+{#                <br><br><br><br><br>#}
+{#                <br><br><br><br><br>#}
+
+                </main>
+            </div>
+
+
+
+               <!-- <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>-->
+        </div>
+
+        <script src="/static/dist/https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="/static/dist/https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/static/dist/js/scripts.js"></script>
+        <script src="/static/dist/https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="/static/dist/assets/demo/chart-area-demo.js"></script>
+        <script src="/static/dist/assets/demo/chart-bar-demo.js"></script>
+        <script src="/static/https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="/static/https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="/static/dist/assets/demo/datatables-demo.js"></script>
+    </body>
+</html>

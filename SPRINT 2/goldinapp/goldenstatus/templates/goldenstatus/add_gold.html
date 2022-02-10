@@ -1,0 +1,30 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center">
+        <h1 align="center">Add image</h1>
+        <tr>
+            <td>image</td>
+            <td><input type="file" name="img" required class="form-control"></td>
+        </tr>
+        <tr>
+            <td>pergram</td>
+            <td><input type="text" name="gram" required class="form-control"></td>
+        </tr>
+        <tr>
+            <td>pavan</td>
+        <td><input type="text" name="pavan" required class="form-control"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" class="btn btn-primary"></td>
+        </tr>
+    </table>
+
+</form>
+
+{% endblock %}

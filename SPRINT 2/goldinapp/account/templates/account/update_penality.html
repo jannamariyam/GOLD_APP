@@ -1,0 +1,29 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<form method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>Type</td>
+                        <td><select name="type" class="form-control">
+                            <option value="">--SELECT--</option>
+                            <option value="fixed">Fixed</option>
+                            <option value="variable">Variable</option>
+                        </td>
+
+        </tr>
+        <tr>
+            <td>Package</td>
+            <td><input type="text" name="package" class="form-control"></td>
+        </tr>
+        ><tr>
+            <td>Penalty</td>
+                    <td><input type="text" name="penalty" class="form-control"></td>
+
+        </tr>
+        <tr><td><input type="submit" value="UPDATE"></td></tr>
+    </table>
+</form>
+{% endblock %}

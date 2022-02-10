@@ -1,0 +1,35 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    <center><a href="/account/register/" class="btn btn-danger">ADD</a> </center>
+    <table align="center" class="table table-bordered">
+        <tr>
+            <td>Name</td>
+            <td>Acc No</td>
+            <td>Bank</td>
+            <td>IFSC</td>
+
+
+        </tr>
+        {% for i in abc %}
+        <tr>
+            <td>{{ i.accname }}</td>
+            <td>{{ i.acc_no }}</td>
+            <td>{{ i.bank }}</td>
+            <td>{{ i.ifsc }}</td>
+
+            <td><a href="{% url 'updateacc' idd=i.slno %}" class="btn btn-primary">update</a></td>
+            <td><a href="{% url 'delacc' idd=i.slno %}" class="btn btn-primary">delete</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</form>
+    </div>
+{% endblock %}
+{#</body>#}
+{#</html>#}
