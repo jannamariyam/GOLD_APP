@@ -1,0 +1,65 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+     <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header"style="background-color: #0c5460">
+                  <h4 class="card-title" style="color: white" >FIXED AMOUNT</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                      </div>
+                            <div align="center" >
+<form method="post">
+    {% csrf_token %}
+    <table align="center">
+
+        <tr>
+            <td>Scheme 1</td>
+            <td><input type="text" required name="one" value="{{ one }}"></td>
+        </tr>
+        <tr>
+            <td>Scheme 2</td>
+            <td><input type="text" required name="two" value="{{ two }}"></td>
+        </tr>
+        <tr>
+            <td>Scheme 3</td>
+            <td><input type="text" required name="three" value="{{ three }}"></td>
+        </tr>
+        <tr>
+            <td>Scheme 4</td>
+            <td><input type="text" required name="four" value="{{ four }}"></td>
+        </tr>
+        <tr>
+            <td>Scheme 5</td>
+            <td><input type="text" required name="five" value="{{ five }}"></td>
+        </tr>
+        <tr>
+            <td>Scheme 6</td>
+            <td><input type="text" required name="six" value="{{ six }}"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+
+            <td><input type="submit" value="submit" class="btn-primary"></td>
+        </tr>
+
+
+    </table>
+
+</center>
+</form>
+{% endblock %}
+{#</body>#}
+{#</html>#}

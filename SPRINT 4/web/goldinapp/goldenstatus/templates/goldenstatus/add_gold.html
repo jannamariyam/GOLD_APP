@@ -1,0 +1,40 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+     <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header"style="background-color: #0c5460">
+                  <h4 class="card-title" style="color: white" >Add image</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                      </div>
+                            <div align="center" >
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center">
+{#        <h1 align="center">Add image</h1>#}
+        <tr>
+            <td>image</td>
+            <td><input type="file" name="img" required class="form-control"></td>
+        </tr>
+        <tr>
+            <td>pergram</td>
+            <td><input type="text" name="gram" required class="form-control"></td>
+        </tr>
+        <tr>
+            <td>pavan</td>
+        <td><input type="text" name="pavan" required class="form-control"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add" class="btn btn-primary"></td>
+        </tr>
+    </table>
+
+</form>
+
+{% endblock %}

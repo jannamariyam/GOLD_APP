@@ -1,0 +1,52 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header"style="background-color: #0c5460">
+                  <h4 class="card-title" style="color: white" >UPDATE IMAGE</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                      </div>
+                            <div align="center" >
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+{#<h3></h3>#}
+    <table align="center">
+        {% for i in objval %}
+        <tr>
+
+            <td><img src="/static/back.jpg/" height="150" width="150">
+                </td>
+        </tr>
+        <tr>
+        <td>
+            <input type="file" name="img" value="{{ i.image }}">
+        </td>
+        </tr>
+{#        <tr>#}
+{#        <td>per gram</td>#}
+{#        <td><input type="text" name="gram" value="{{ i.pergram }}" required class="form-control"></td>#}
+{#    </tr>#}
+{#        <tr>#}
+{#            <td>pavan</td>#}
+{#            <td><input type="text" name="pavan" value="{{ i.pavan }}" required class="form-control"></td>#}
+{#        </tr>#}
+
+
+        <tr>
+          <td><input type="submit" value="submit" class="btn btn-primary"></td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+</form>
+{% endblock %}
+
+</body>
+</html>

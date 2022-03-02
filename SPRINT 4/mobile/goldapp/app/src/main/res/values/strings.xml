@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GoldinApp</string>
+    <string name="app_cap">Aplus Gold Diamonds</string>
+    <string-array name="ptype">
+        <item>Monthly</item>
+        <item>Weekly</item>
+
+    </string-array>
+    <string-array name="plan">
+        <item>Fixed</item>
+        <item>Variable</item>
+
+    </string-array>
+</resources>

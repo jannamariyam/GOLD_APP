@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="Start Date"
+            android:textColor="#F4F4F4" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:gravity="center"
+            android:textColor="#EDE6E6" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#F4F4F4" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="End Date"
+            android:textColor="#F4F4F4" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:gravity="center"
+            android:textColor="#EDE6E6" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:gravity="center"
+            android:text="Amount"
+            android:textColor="#F4F4F4" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:height="30dp"
+            android:gravity="center"
+            android:textColor="#EDE6E6" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:gravity="fill_horizontal"
+            android:text="Pay"
+            android:textColor="#F4F4F4" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#FFC107" />
+
+</LinearLayout>

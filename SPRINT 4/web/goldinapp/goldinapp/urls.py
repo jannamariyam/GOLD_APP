@@ -1,0 +1,38 @@
+"""goldinapp URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import url,include
+from temp import views
+urlpatterns = [
+
+    url(r'^temp/',include('temp.url')),
+    url(r'^goldenstus/',include('goldenstatus.url')),
+    url(r'^price_fixed/',include('price_fixed.url')),
+    url(r'^package/',include('package.urls')),
+    url(r'^scheme/',include('scheme.urls')),
+    url(r'^reward/',include('reward.urls')),
+    url(r'^account/',include('account.urls')),
+    url(r'^customer/',include('customer.urls')),
+    url(r'^login/',include('login.urls')),
+    url(r'^uplan/',include('userplan.urls')),
+    url(r'^payment/',include('payments.urls')),
+    url(r'^pending/',include('planpay.urls')),
+    url(r'^close/',include('closeacc.urls')),
+    url(r'^penalty/',include('penentry.urls')),
+    url('^$',views.login),
+
+]

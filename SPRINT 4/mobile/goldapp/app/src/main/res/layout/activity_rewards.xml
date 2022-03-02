@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Rewards">
+
+
+    <TableRow
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:baselineAligned="false"
+        android:gravity="center|center_vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:text="Making charge Discount Percentage"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </TableRow>
+
+</android.widget.LinearLayout>

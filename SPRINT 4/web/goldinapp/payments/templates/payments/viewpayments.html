@@ -1,0 +1,44 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container">
+<H3>UPDATE PAYMENT</H3>
+
+<form method="post">
+    {% csrf_token %}
+
+    <table align="center" class="table table-bordered">
+        <tr>
+            <td><B>TrNo</B></td>
+            <td><B>Date</B></td>
+            <td><B>Customer</B></td>
+            <td><B>Selected</B></td>
+            <td><B>Amount</B></td>
+            <td><B>Image</B></td>
+            <td><B>Status</B></td>
+            <td><B></B></td>
+            <td><B></B></td>
+
+
+        </tr>
+        {% for i in objs %}
+        <tr>
+            <td>{{ i.payid }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.cusid.name }}</td>
+            <td>{{ i.plid.amt }}</td>
+            <td>{{ i.amout }}</td>
+            <td><img width="200" height="100" src="/static/payments/{{ i.payid }}.jpg"></td>
+            <td>{{ i.status }}</td>
+            <td><a href="{% url 'acc' idd=i.payid %}" class="btn btn-primary">Accept</a></td>
+            <td><a href="{% url 'rej' idd=i.payid %}" class="btn btn-primary">Reject</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+    </div>
+{% endblock %}
+{#</body>#}
+{#</html>#}

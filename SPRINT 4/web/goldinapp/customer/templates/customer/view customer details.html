@@ -1,0 +1,39 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container">
+<h1 align="center">Customer Details</h1>
+<center><a href="/customer/registercus/" class="btn btn-primary">Add New</a></center>
+<form method="post">
+    {% csrf_token %}
+    <table align="center" class="table table-bordered">
+
+        <tr>
+            <th>name</th>
+            <th>phone.no</th>
+            <th>e-mail</th>
+            <th>Nominee PH</th>
+            <th>nominee</th>
+        </tr>
+
+            {% for i in objval %}
+        <tr>
+{#            <td><img src="/static/{{ i.image }}" style="width: 4cm;height: 3cm"></td>#}
+            <td>{{ i.name }}</td>
+            <td>{{ i.phone}}</td>
+            <td>{{ i.email}}</td>
+            <td>{{ i.nph}}</td>
+            <td>{{ i.nominee}}</td>
+            <td><a href="{%  url 'viewtr' idd=i.cusid %}" class="btn btn-primary">View Transactions</a></td>
+{#            <td><a href="{% url 'delete' idd=i.g_id %}" class="btn btn-primary">Delete</a></td>#}
+
+        </tr>
+        {% endfor %}
+    </table>
+
+</form>
+    </div>
+{% endblock %}
+</body>
+</html>

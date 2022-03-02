@@ -1,0 +1,36 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+    <br>
+    <br>
+<div class="container">
+<H3>Report</H3>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="date" name="date">
+    <input type="submit" name="submit">
+{#    <center><a href="/account/register/" class="btn btn-danger">ADD</a> </center>#}
+    <table align="center" class="table table-bordered">
+
+        <tr>
+            <td><B>Payments</B></td>
+            <td><B>Gold Puchase</B></td>
+
+
+
+        </tr>
+     <tr>
+            <td><B>{{ coll }}</B></td>
+            <td><B>{{ gpur }}</B></td>
+
+
+
+        </tr>
+
+    </table>
+
+</form>
+    </div>
+{% endblock %}
+{#</body>#}
+{#</html>#}
